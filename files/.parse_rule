@@ -1,0 +1,63 @@
+#tabela na parametry satelity
+<TAB>
+	<NAME>nazwaTabeli</NAME>
+	<COL>
+		<COUNT>6</COUNT> 
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+	</COL>
+</TAB>
+
+#tabela na kanały telewizyjne
+<TAB>
+	<NAME>nazwaTabeli</NAME>
+	<COL>
+		<COUNT>14</COUNT> 
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+	</COL>
+</TAB>
+
+#tabela na kanały radiowe
+<TAB>
+	<NAME>nazwaTabeli</NAME>
+	<COL>
+		<COUNT>12</COUNT> 
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+		<NAME>nazwaKolumny</NAME>
+	</COL>
+</TAB>
+
+#parametry parsowania strony (co umieszczać w tabelach)
+
+<SATELLITE>
+	<
+	<tbody>
+		<CLASS>bld</CLASS>
+
+
+
+
+</SATELLITE>
