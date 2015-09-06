@@ -1,4 +1,4 @@
-package patlas.agh;
+package agh;
 
 
 public class Preference {

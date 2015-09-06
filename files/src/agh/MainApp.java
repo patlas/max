@@ -1,4 +1,4 @@
-package patlas.agh;
+package agh;
 
 import javax.swing.JFrame;
 import org.apache.log4j.Logger;
@@ -17,7 +17,7 @@ public class MainApp {
 		gui.setVisible(true); 
 		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		gui.setSize(400, 320);
-		logger.info("Interfejs GUI zosta³ uruchomiony.");
+		logger.info("Interfejs GUI zostaï¿½ uruchomiony.");
 		} 
 	
 	

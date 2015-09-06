@@ -1,4 +1,4 @@
-package patlas.agh;
+package agh;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import patlas.agh.utils.TwoTypeList;
+import agh.utils.TwoTypeList;
 
 public class Preferences {
 
@@ -38,7 +38,7 @@ public class Preferences {
 				newFile = true;
 			}
 			catch(IOException ioe){
-		         logger.error("Natrafiono na b³¹d podczas próby zapisu preferencji.");
+		         logger.error("Natrafiono na bï¿½ï¿½d podczas prï¿½by zapisu preferencji.");
 		    	 ioe.printStackTrace();
 			}
 		}
@@ -70,7 +70,7 @@ public class Preferences {
 				}
 				
 				writer.close();
-				logger.info("Aktualizacja preferencji zakoñczona sukcesem.");
+				logger.info("Aktualizacja preferencji zakoï¿½czona sukcesem.");
 		
 		} catch (FileNotFoundException e) {
 			logger.fatal("Brak pliku preferencji lub plik otwarty.");
@@ -78,7 +78,7 @@ public class Preferences {
 		}
 	}
 	
-	private static TwoTypeList<String,Integer> readSettings() // PRZEROBIÆ
+	private static TwoTypeList<String,Integer> readSettings() // PRZEROBIï¿½
 	{
 		
 		File file = new File(dir+prefFile);
@@ -90,7 +90,7 @@ public class Preferences {
 			
 			saveSettings();
 			
-			logger.info("Stworzono domyœlny plik preferencji.");
+			logger.info("Stworzono domyï¿½lny plik preferencji.");
 			//return null;
 		}
 		
@@ -131,7 +131,7 @@ public class Preferences {
 						
 		}
 		
-		logger.info("Wczytywanie preferencji zakoñczono sukcesem.");
+		logger.info("Wczytywanie preferencji zakoï¿½czono sukcesem.");
 	}
 	
 }

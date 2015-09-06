@@ -1,4 +1,4 @@
-package patlas.agh;
+package agh;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -40,11 +40,11 @@ public class Downloader implements Runnable {
 	public static void setTimeout(long time)
 	{
 		TIMEOUT = time;
-		logger.info("Zmienna timeout zosta³a ustawiona na:"+TIMEOUT );
+		logger.info("Zmienna timeout zostaï¿½a ustawiona na:"+TIMEOUT );
 	}
 	
 	
-	private static String MD5string(String str) //tworzenie nazw plików je¿eli takowych nie podano
+	private static String MD5string(String str) //tworzenie nazw plikï¿½w jeï¿½eli takowych nie podano
 	{
 		MessageDigest md5;
 		String ret = null;
@@ -53,7 +53,7 @@ public class Downloader implements Runnable {
 			md5.update(StandardCharsets.UTF_8.encode(str));
 			ret = String.format("%032x", new BigInteger(1, md5.digest()));
 		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();//DODAÆ LOGGER!!!
+			e.printStackTrace();//DODAï¿½ LOGGER!!!
 		}
 
 		return String.valueOf(Math.abs(str.hashCode()));//ret;
@@ -77,7 +77,7 @@ public class Downloader implements Runnable {
 	    BufferedReader br;
 	    BufferedWriter bw = null;
 	    String line;
-	 	logger.info("Ruszy³ w¹tek: " + url.toString()); 
+	 	logger.info("Ruszyï¿½ wï¿½tek: " + url.toString()); 
 
 	    Thread.currentThread().setName(fName);
 	    System.setProperty("http.agent", ""); 
@@ -109,16 +109,16 @@ public class Downloader implements Runnable {
 	        	bw.newLine();
 	        }
 	    } catch (MalformedURLException mue) {
-	    	logger.error("Podano b³êdny adres strony www");
+	    	logger.error("Podano bï¿½ï¿½dny adres strony www");
 	         mue.printStackTrace();
 	    } catch (IOException ioe) {
-	    	logger.error("Wykryto b³¹d podczas próby zapisu/odczytu do pliku: " +fName);
+	    	logger.error("Wykryto bï¿½ï¿½d podczas prï¿½by zapisu/odczytu do pliku: " +fName);
 	         ioe.printStackTrace();
 	    } finally {
 	        try {
 	            if (is != null) is.close();
 	            if (bw != null) bw.close();
-	            logger.info("Strona zosta³a pobrana i zapisana do pliku: " +fName);
+	            logger.info("Strona zostaï¿½a pobrana i zapisana do pliku: " +fName);
 	        } catch (IOException ioe) {
 	            // nothing to see here
 	        }
@@ -145,7 +145,7 @@ public class Downloader implements Runnable {
 		try {
 			url = new URL(urlString);
 		} catch (MalformedURLException e) {
-			logger.fatal("Podany adres nie spe³nia wymogów standardu.");
+			logger.fatal("Podany adres nie speï¿½nia wymogï¿½w standardu.");
 			e.printStackTrace();
 		}				
 	}
@@ -178,7 +178,7 @@ public class Downloader implements Runnable {
 		try {
 			url = new URL(urlString);
 		} catch (MalformedURLException e) {
-			logger.fatal("Podany adres nie spe³nia wymogów standardu.");
+			logger.fatal("Podany adres nie speï¿½nia wymogï¿½w standardu.");
 			e.printStackTrace();
 		}	
 		isDownloaded = true;
@@ -198,7 +198,7 @@ public class Downloader implements Runnable {
 		try {
 			url = new URL(urlString);
 		} catch (MalformedURLException e) {
-			logger.fatal("Podany adres nie spe³nia wymogów standardu.");
+			logger.fatal("Podany adres nie speï¿½nia wymogï¿½w standardu.");
 			e.printStackTrace();
 		}	
 		

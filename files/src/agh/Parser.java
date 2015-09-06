@@ -1,4 +1,4 @@
-package patlas.agh;
+package agh;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,8 +19,8 @@ public class Parser {
 	{
 		if(webpage.isDownloaded == true)
 		{
-			file = webpage.getFile(); //DODAÆ LOG!!
-			logger.info("Pobieranie pliku preferencji zakoñczone sukcesem.");
+			file = webpage.getFile(); //DODAï¿½ LOG!!
+			logger.info("Pobieranie pliku preferencji zakoï¿½czone sukcesem.");
 		}
 
 	}
@@ -59,7 +59,7 @@ public class Parser {
 			}
 			
 		} catch (IOException e) {
-			logger.fatal("Plik preferencji nie zosta³ pobrany lub nie istnieje");
+			logger.fatal("Plik preferencji nie zostaï¿½ pobrany lub nie istnieje");
 			e.printStackTrace();
 		}
 		
@@ -90,7 +90,7 @@ public ArrayList<ArrayList<ArrayList<String>>> getChannels(){
 					channelList = new ArrayList<String>();
 					for(Element tCG : tCL.getElementsByTag("td"))
 					{
-						if(index++ < 2) continue; //pomijanie 2 pierwszych kolumn "œmieci"
+						if(index++ < 2) continue; //pomijanie 2 pierwszych kolumn "ï¿½mieci"
 						channelList.add(tCG.text());
 					}
 					channelGroups.add(channelList);
@@ -102,7 +102,7 @@ public ArrayList<ArrayList<ArrayList<String>>> getChannels(){
 			}
 			
 		} catch (IOException e) {
-			logger.fatal("Plik preferencji nie zosta³ pobrany lub nie istnieje");
+			logger.fatal("Plik preferencji nie zostaï¿½ pobrany lub nie istnieje");
 			e.printStackTrace();
 		}
 			

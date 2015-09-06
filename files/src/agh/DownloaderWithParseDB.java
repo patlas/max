@@ -1,13 +1,13 @@
 /**
  * 
  */
-package patlas.agh;
+package agh;
 
 import javax.swing.JOptionPane;
 
 import org.apache.log4j.Logger;
 
-import patlas.agh.exception.MyException;
+import agh.exception.MyException;
 
 /**
  * @author PatLas
@@ -31,7 +31,7 @@ public class DownloaderWithParseDB extends Downloader {
 			try {
 				Thread.sleep(10);
 			} catch (InterruptedException e) {
-				logger.info("W¹tek o nazwie: "+Thread.currentThread().getName()+" zosta³ wstrzymany.");
+				logger.info("Wï¿½tek o nazwie: "+Thread.currentThread().getName()+" zostaï¿½ wstrzymany.");
 				return;
 
 				
@@ -39,7 +39,7 @@ public class DownloaderWithParseDB extends Downloader {
 		}
 		SqlDB.IN_USE = true;
 		
-		logger.info("W¹tek o nazwie: "+Thread.currentThread().getName()+" rozpocz¹³ zapis do bazy danych.");
+		logger.info("Wï¿½tek o nazwie: "+Thread.currentThread().getName()+" rozpoczï¿½ï¿½ zapis do bazy danych.");
 		
 		SqlDB db = new SqlDB(SqlDB.DB_NAME);
 		Parser parser = new Parser(this);
@@ -48,18 +48,18 @@ public class DownloaderWithParseDB extends Downloader {
 			db.insertTransponderRows(parser.getTransponder());
 			db.insertChannelRows(parser.getChannels());
 			SqlDB.IN_USE = false;
-			if(this.getFile().delete() == true); // DODAC LOGGER (nie)uda³o siê usun¹æ pliku
-			logger.info("W¹tek : "+Thread.currentThread().getName()+" zakoñczy³ parsowanie i zapis bazy danych");
+			if(this.getFile().delete() == true); // DODAC LOGGER (nie)udaï¿½o siï¿½ usunï¿½ï¿½ pliku
+			logger.info("Wï¿½tek : "+Thread.currentThread().getName()+" zakoï¿½czyï¿½ parsowanie i zapis bazy danych");
 
 			
-			JOptionPane.showMessageDialog(null,"Strona o adresie: "+ this.getStringUrl() + " zosta³a"
-					+ " przetworzona pomyœlnie!","Pobieranie zakoñczone",
+			JOptionPane.showMessageDialog(null,"Strona o adresie: "+ this.getStringUrl() + " zostaï¿½a"
+					+ " przetworzona pomyï¿½lnie!","Pobieranie zakoï¿½czone",
 				    JOptionPane.INFORMATION_MESSAGE
 				  );
 			
 		} catch (MyException e) {
 			SqlDB.IN_USE = false;
-			logger.error("W¹tek : "+Thread.currentThread().getName()+" natrafi³ na problem podczas przetwarzanai strony");
+			logger.error("Wï¿½tek : "+Thread.currentThread().getName()+" natrafiï¿½ na problem podczas przetwarzanai strony");
 			e.printStackTrace();
 		}
 		

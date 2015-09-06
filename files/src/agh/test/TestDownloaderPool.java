@@ -1,26 +1,26 @@
-package patlas.agh.test;
+package agh.test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-import patlas.agh.Downloader;
-import patlas.agh.DownloaderPool;
-import patlas.agh.Preference;
-import patlas.agh.Preferences;
+import agh.Downloader;
+import agh.DownloaderPool;
+import agh.Preference;
+import agh.Preferences;
 
 public class TestDownloaderPool {
 
 	public static void main(String[] args) {
 
-		/*Wczytanie zawartoœci pliku preferences*/
+		/*Wczytanie zawartoï¿½ci pliku preferences*/
 		Preferences.loadSettings();
 		
-		/* List obiektów Downloader - runnable */
+		/* List obiektï¿½w Downloader - runnable */
 		ArrayList<Downloader> list = new ArrayList<Downloader>();
 		
-		/* Wykorzystanie wczytanych preferencji do stworzenia obiektów runnable
-		 * i umieszczenia ich na liœcie obiektów do uruchomienia + prezentacja 
+		/* Wykorzystanie wczytanych preferencji do stworzenia obiektï¿½w runnable
+		 * i umieszczenia ich na liï¿½cie obiektï¿½w do uruchomienia + prezentacja 
 		 * konstruktora Downloader(Preference)
 		 */
 		for(Preference x : Preferences.prefList)
@@ -59,7 +59,7 @@ public class TestDownloaderPool {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Pobra³em wszystko");
+		System.out.println("Pobraï¿½em wszystko");
 
 	}
 

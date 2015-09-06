@@ -1,4 +1,4 @@
-package patlas.agh.exception;
+package agh.exception;
 
 public class MyException extends Exception {
 

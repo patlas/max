@@ -1,4 +1,4 @@
-package patlas.agh;
+package agh;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -35,14 +35,14 @@ public class DownloaderPool {
 		for (Downloader dwn : list)
 			ret.add(executor.submit(dwn));
 		executor.shutdown();
-		logger.info("Rozpoczêto procedurê wielow¹tkowego pobierania.");
+		logger.info("Rozpoczï¿½to procedurï¿½ wielowï¿½tkowego pobierania.");
 		return ret;
 	}
 	
 	public void stopNow()
 	{
 		exec.shutdownNow();
-		logger.warn("Parsowanie zosta³o przerwane przez u¿ytkownika.");
+		logger.warn("Parsowanie zostaï¿½o przerwane przez uï¿½ytkownika.");
 	}
 
 }

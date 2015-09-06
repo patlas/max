@@ -1,7 +1,7 @@
 /**
  * 
  */
-package patlas.agh.utils;
+package agh.utils;
 
 /**
  * @author PatLas

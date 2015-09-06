@@ -1,4 +1,4 @@
-package patlas.agh.utils;
+package agh.utils;
 
 import java.util.ArrayList;
 
