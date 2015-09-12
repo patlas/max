@@ -20,7 +20,7 @@ public class Parser {
 		if(webpage.isDownloaded == true)
 		{
 			file = webpage.getFile(); //DODA� LOG!!
-			logger.info("Pobieranie pliku preferencji zako�czone sukcesem.");
+			logger.info("Pobieranie pliku preferencji zakończone sukcesem.");
 		}
 
 	}
@@ -59,7 +59,7 @@ public class Parser {
 			}
 			
 		} catch (IOException e) {
-			logger.fatal("Plik preferencji nie zosta� pobrany lub nie istnieje");
+			logger.fatal("Plik preferencji nie został wczytany lub nie istnieje");
 			e.printStackTrace();
 		}
 		
@@ -98,11 +98,11 @@ public ArrayList<ArrayList<ArrayList<String>>> getChannels(){
 				}	
 				
 				parsedTranspondersChannelList.add(channelGroups);
-
+                                logger.info("Zakończono parsowanie kanałów");
 			}
 			
 		} catch (IOException e) {
-			logger.fatal("Plik preferencji nie zosta� pobrany lub nie istnieje");
+			logger.fatal("Plik preferencji nie został wczytany lub nie istnieje");
 			e.printStackTrace();
 		}
 			

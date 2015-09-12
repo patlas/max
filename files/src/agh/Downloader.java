@@ -40,7 +40,7 @@ public class Downloader implements Runnable {
 	public static void setTimeout(long time)
 	{
 		TIMEOUT = time;
-		logger.info("Zmienna timeout zosta�a ustawiona na:"+TIMEOUT );
+		logger.info("Zmienna timeout została ustawiona na:"+TIMEOUT );
 	}
 	
 	
@@ -77,7 +77,7 @@ public class Downloader implements Runnable {
 	    BufferedReader br;
 	    BufferedWriter bw = null;
 	    String line;
-	 	logger.info("Ruszy� w�tek: " + url.toString()); 
+	 	logger.info("Ruszył wątek: " + url.toString()); 
 
 	    Thread.currentThread().setName(fName);
 	    System.setProperty("http.agent", ""); 
@@ -109,16 +109,16 @@ public class Downloader implements Runnable {
 	        	bw.newLine();
 	        }
 	    } catch (MalformedURLException mue) {
-	    	logger.error("Podano b��dny adres strony www");
+	    	logger.error("Podano błędny adres strony www");
 	         mue.printStackTrace();
 	    } catch (IOException ioe) {
-	    	logger.error("Wykryto b��d podczas pr�by zapisu/odczytu do pliku: " +fName);
+	    	logger.error("Wykryto błąd podczas próby zapisu/odczytu do pliku: " +fName);
 	         ioe.printStackTrace();
 	    } finally {
 	        try {
 	            if (is != null) is.close();
 	            if (bw != null) bw.close();
-	            logger.info("Strona zosta�a pobrana i zapisana do pliku: " +fName);
+	            logger.info("Strona została pobrana i zapisana do pliku: " +fName);
 	        } catch (IOException ioe) {
 	            // nothing to see here
 	        }
@@ -145,7 +145,7 @@ public class Downloader implements Runnable {
 		try {
 			url = new URL(urlString);
 		} catch (MalformedURLException e) {
-			logger.fatal("Podany adres nie spe�nia wymog�w standardu.");
+			logger.fatal("Podany adres nie spełnia wymogów standardu.");
 			e.printStackTrace();
 		}				
 	}
@@ -178,7 +178,7 @@ public class Downloader implements Runnable {
 		try {
 			url = new URL(urlString);
 		} catch (MalformedURLException e) {
-			logger.fatal("Podany adres nie spe�nia wymog�w standardu.");
+			logger.fatal("Podany adres nie spełnia wymogów standardu.");
 			e.printStackTrace();
 		}	
 		isDownloaded = true;
@@ -198,7 +198,7 @@ public class Downloader implements Runnable {
 		try {
 			url = new URL(urlString);
 		} catch (MalformedURLException e) {
-			logger.fatal("Podany adres nie spe�nia wymog�w standardu.");
+			logger.fatal("Podany adres nie spełnia wymogłw standardu.");
 			e.printStackTrace();
 		}	
 		

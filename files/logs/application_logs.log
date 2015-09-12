@@ -1,0 +1,86 @@
+﻿2015-09-12 20:27:27 INFO  Preferences:134 - Wczytywanie preferencji zakończono sukcesem.
+2015-09-12 20:27:27 INFO  MainApp:20 - Interfejs GUI został uruchomiony.
+2015-09-12 20:27:28 INFO  DownloaderPool:38 - Rozpoczęto procedurę wielowątkowego pobierania.
+2015-09-12 20:27:28 INFO  Downloader:80 - Ruszył wątek: http://pl.kingofsat.net/pos-13E_pol.php
+2015-09-12 20:27:29 INFO  Downloader:121 - Strona została pobrana i zapisana do pliku: f_1475209670.html
+2015-09-12 20:27:29 INFO  DownloaderWithParseDB:30 - Wątek o nazwie: f_1475209670.html rozpoczął zapis do pliku.
+2015-09-12 20:27:29 INFO  Parser:23 - Pobieranie pliku preferencji zakończone sukcesem.
+2015-09-12 20:27:29 INFO  FileAppender:97 - Zapis do pliku zakończony sukcesem.
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:27:29 INFO  FileAppender:134 - Zapis do pliku zakończony sukcesem.
+2015-09-12 20:27:29 INFO  DownloaderWithParseDB:43 - Wątek : f_1475209670.html zakończył parsowanie i zapis do pliku
+2015-09-12 20:29:02 INFO  Preferences:134 - Wczytywanie preferencji zakończono sukcesem.
+2015-09-12 20:29:02 INFO  MainApp:20 - Interfejs GUI został uruchomiony.
+2015-09-12 20:29:04 INFO  DownloaderPool:38 - Rozpoczęto procedurę wielowątkowego pobierania.
+2015-09-12 20:29:04 INFO  Downloader:80 - Ruszył wątek: http://pl.kingofsat.net/pos-13E_pol.php
+2015-09-12 20:29:04 INFO  Downloader:121 - Strona została pobrana i zapisana do pliku: f_1475209670.html
+2015-09-12 20:29:04 INFO  DownloaderWithParseDB:30 - Wątek o nazwie: f_1475209670.html rozpoczął zapis do pliku.
+2015-09-12 20:29:04 INFO  Parser:23 - Pobieranie pliku preferencji zakończone sukcesem.
+2015-09-12 20:29:05 INFO  FileAppender:97 - Zapis do pliku zakończony sukcesem.
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  Parser:101 - Zakończono parsowanie kanałów
+2015-09-12 20:29:05 INFO  FileAppender:134 - Zapis do pliku zakończony sukcesem.
+2015-09-12 20:29:05 INFO  DownloaderWithParseDB:43 - Wątek : f_1475209670.html zakończył parsowanie i zapis do pliku

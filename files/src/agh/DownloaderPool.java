@@ -35,14 +35,14 @@ public class DownloaderPool {
 		for (Downloader dwn : list)
 			ret.add(executor.submit(dwn));
 		executor.shutdown();
-		logger.info("Rozpocz�to procedur� wielow�tkowego pobierania.");
+		logger.info("Rozpoczęto procedurę wielowątkowego pobierania.");
 		return ret;
 	}
 	
 	public void stopNow()
 	{
 		exec.shutdownNow();
-		logger.warn("Parsowanie zosta�o przerwane przez u�ytkownika.");
+		logger.warn("Parsowanie zostało przerwane przez użytkownika.");
 	}
 
 }

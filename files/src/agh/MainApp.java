@@ -17,7 +17,7 @@ public class MainApp {
 		gui.setVisible(true); 
 		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		gui.setSize(400, 320);
-		logger.info("Interfejs GUI zosta� uruchomiony.");
+		logger.info("Interfejs GUI został uruchomiony.");
 		} 
 	
 	

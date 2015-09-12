@@ -131,7 +131,7 @@ public class Preferences {
 						
 		}
 		
-		logger.info("Wczytywanie preferencji zako�czono sukcesem.");
+		logger.info("Wczytywanie preferencji zakończono sukcesem.");
 	}
 	
 }
