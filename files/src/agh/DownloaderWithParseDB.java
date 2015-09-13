@@ -4,19 +4,23 @@
 package agh;
 
 import agh.exception.MyException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import org.apache.log4j.Logger;
 
 
 /**
- * @author PatLas
+ * @author Max
  *
  */
 public class DownloaderWithParseDB extends Downloader {
 
     final static Logger logger = Logger.getLogger(DownloaderWithParseDB.class);
     static String outputFile = "output.txt";
+    
+    public ArrayList<ArrayList<String>> transponderArray = null;
+    public ArrayList<ArrayList<ArrayList<String>>> channelArray = null;
 
     public DownloaderWithParseDB(Preference pref) {
             super(pref);
@@ -35,6 +39,10 @@ public class DownloaderWithParseDB extends Downloader {
         try{
             fa.appendTransponders(parser.getTransponder());
             fa.appendChannels(parser.getChannels());
+            transponderArray = parser.getTransponder();
+            channelArray = parser.getChannels();
+             
+            
             fa.writer.close();
         } catch(MyException me){
             me.printStackTrace();
@@ -47,6 +55,7 @@ public class DownloaderWithParseDB extends Downloader {
                         + " przetworzona pomyślnie!","Pobieranie zakończone",
                     JOptionPane.INFORMATION_MESSAGE
                   );
+        MyGUI.bPreview.setEnabled(true);
 		
     }
 }

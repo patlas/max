@@ -5,23 +5,48 @@
  */
 package agh;
 
+import agh.utils.DownloadPreview;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.concurrent.Future;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import org.apache.log4j.Logger;
 
 /**
  *
- * @author patlas
+ * @author Max
  */
 public class MyGUI extends javax.swing.JFrame {
 
     private ArrayList<Downloader> listDownloaderPool = new ArrayList<Downloader>();
     private DownloaderPool downloaderPool = null;
+    private DownloaderWithParseDB parseDownload = null;
 
     final static Logger logger = Logger.getLogger(MyGUI.class);
     public MyGUI() {
         initComponents();
+        bPreview.setEnabled(false);
+        
+         try {
+                for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows"/*"Nimbus"*/.equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+                
+            }
+         }catch(ClassNotFoundException e){
+             
+         }catch(IllegalAccessException i){
+             
+         }catch(InstantiationException in){
+             
+         }catch(UnsupportedLookAndFeelException u){
+             
+         }
+        
+        //setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         Preferences.loadSettings();
     }
 
@@ -35,39 +60,131 @@ public class MyGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         bDownload = new javax.swing.JButton();
+        bPreview = new javax.swing.JButton();
+        bExit = new javax.swing.JButton();
+        tChannel = new javax.swing.JTabbedPane();
+        pTransponder = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tTable = new javax.swing.JTable();
+        pChannels = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        cTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Java - Maksymilian Świder");
 
-        bDownload.setText("jButton1");
+        bDownload.setText("Download");
         bDownload.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bDownloadActionPerformed(evt);
             }
         });
 
+        bPreview.setText("Preview");
+        bPreview.setMaximumSize(new java.awt.Dimension(79, 23));
+        bPreview.setMinimumSize(new java.awt.Dimension(79, 23));
+        bPreview.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPreviewActionPerformed(evt);
+            }
+        });
+
+        bExit.setText("Exit");
+        bExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bExitActionPerformed(evt);
+            }
+        });
+
+        tTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tTable);
+
+        javax.swing.GroupLayout pTransponderLayout = new javax.swing.GroupLayout(pTransponder);
+        pTransponder.setLayout(pTransponderLayout);
+        pTransponderLayout.setHorizontalGroup(
+            pTransponderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+        );
+        pTransponderLayout.setVerticalGroup(
+            pTransponderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+        );
+
+        tChannel.addTab("Transponders", pTransponder);
+
+        cTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(cTable);
+
+        javax.swing.GroupLayout pChannelsLayout = new javax.swing.GroupLayout(pChannels);
+        pChannels.setLayout(pChannelsLayout);
+        pChannelsLayout.setHorizontalGroup(
+            pChannelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+        );
+        pChannelsLayout.setVerticalGroup(
+            pChannelsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+        );
+
+        tChannel.addTab("Channels", pChannels);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(bDownload)
-                .addContainerGap(303, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bDownload, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(bPreview, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(tChannel))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(bDownload)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tChannel)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(bDownload, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bPreview, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bExit, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bDownloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDownloadActionPerformed
         
-        listDownloaderPool.add(new DownloaderWithParseDB(Preferences.prefList.get(0)));
+        parseDownload = new DownloaderWithParseDB(Preferences.prefList.get(0));
+        
+        listDownloaderPool.add(parseDownload);
   
         downloaderPool = new DownloaderPool();		
         try {
@@ -76,12 +193,32 @@ public class MyGUI extends javax.swing.JFrame {
                 logger.error("Natrafiono na konflikt podczas próby pobierania plików.");
                 e1.printStackTrace();
         }
-
+        
         listDownloaderPool.clear();
     }//GEN-LAST:event_bDownloadActionPerformed
+
+    private void bPreviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPreviewActionPerformed
+        DownloadPreview dp  = new DownloadPreview(tTable, cTable);
+        dp.viewData(parseDownload.transponderArray, parseDownload.channelArray);
+        
+    }//GEN-LAST:event_bPreviewActionPerformed
+
+    private void bExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bExitActionPerformed
+        logger.info("Aplikacja została zamkniêta.");
+        System.exit(NORMAL);
+    }//GEN-LAST:event_bExitActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton bDownload;
+    private javax.swing.JButton bExit;
+    public static javax.swing.JButton bPreview;
+    public javax.swing.JTable cTable;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel pChannels;
+    private javax.swing.JPanel pTransponder;
+    private javax.swing.JTabbedPane tChannel;
+    public javax.swing.JTable tTable;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,7 +27,7 @@ import org.apache.log4j.Logger;
 
 /**
  *
- * @author patlas
+ * @author Max
  */
 public class FileAppender {
     
